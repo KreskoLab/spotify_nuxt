@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!$fetchState.pending" class="h-screen py-6 px-10"> 
+  <div class="py-2 px-2 sm:px-4" v-if="!$fetchState.pending"> 
  
     <Info :item="playlist" />
     <Tracks :tracks="playlist.tracks" />
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  async fetch(){
+  async fetch() {
     await this.$axios.$get(`https://api.spotify.com/v1/playlists/${this.$route.params.id}`)
     .then((res) => {
       this.playlist = {
@@ -35,14 +35,10 @@ export default {
       }
     })
   },
-  data(){
-    return{
+  data() {
+    return {
       playlist: {}
     }
   }
 }
 </script>
-
-<style>
-
-</style>

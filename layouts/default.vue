@@ -1,15 +1,15 @@
 <template>
-  <div class="bg-emerald-700 grid grid-rows-6 grid-cols-5 h-screen">
+  <div class="flex flex-col sm:grid sm:grid-rows-6 sm:grid-cols-5 h-screen bg-emerald-700">
 
-    <div class="row-span-6">
+    <div class="order-last sm:relative sm:order-first sm:row-span-6">
       <Sidebar />
     </div>
 
-    <div class="row-span-6 col-span-4 overflow-hidden overflow-y-auto">
+    <div class="mb-auto overflow-auto sm:pt-4 sm:mb-0 sm:row-span-6 sm:col-span-4">
       <Nuxt />
     </div>
 
-    <div class="row-start-auto col-span-5">
+    <div class="sm:relative sm:row-start-auto sm:col-span-5">
       <Player />
     </div>
     
@@ -19,7 +19,7 @@
 <script>
 export default {
   computed: {
-    show(){
+    show() {
       return this.$store.state.player.show
     }
   }

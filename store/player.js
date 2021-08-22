@@ -30,7 +30,9 @@
 
   export const actions = {
     async check({ commit, state }, track_id){
-      var res = await this.$axios.$get(`https://api.spotify.com/v1/me/tracks/contains?ids=${track_id}`)
-      commit('updateChecked', res[0])
+      await this.$axios.$get(`https://api.spotify.com/v1/me/tracks/contains?ids=${track_id}`)
+      .then((res) => {
+        commit('updateChecked', res[0])
+      })
     }
   }

@@ -14,18 +14,14 @@
 <script>
 export default {
   layout: 'login',
-  mounted(){
-    if(this.$auth.loggedIn){
-      this.$router.push({ name: 'test' })
-    }
-  },
+  auth: 'guest',
   methods:{
     async login(){
       try{ 
         await this.$auth.loginWith('spotify')
       }
       catch(err){
-
+        console.log(err);
       }
     }
   }

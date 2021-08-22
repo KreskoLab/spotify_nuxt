@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'apply',
+    title: 'Spotify Nuxt',
     htmlAttrs: {
       lang: 'en'
     },
@@ -43,9 +43,9 @@ export default {
 
   auth: {
     redirect: {
-      // login: '/login',
+      login: '/',
       //logout: '/',
-      // home: '/',
+      home: '/browse',
       callback: '/callback'
     },
     strategies: {
@@ -79,5 +79,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  server: {
+    host: '0.0.0.0'
   }
 }

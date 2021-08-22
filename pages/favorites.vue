@@ -1,9 +1,7 @@
 <template>
-  <div v-if="!$fetchState.pending" class="h-screen py-6 px-10"> 
- 
+  <div class="py-2 px-2 sm:px-4" v-if="!$fetchState.pending"> 
     <Info :item="info" />
     <Tracks :tracks="tracks" />
-
   </div>
 </template>
 
