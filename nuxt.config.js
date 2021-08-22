@@ -69,7 +69,7 @@ export default {
         responseType: 'code',
         grantType: 'authorization_code',
         accessType: 'offline',
-        redirectUri: 'http://localhost:3000/callback',
+        redirectUri: 'http://spotify-nuxt.vercel.app/callback',
         clientId: '9e5240aae3b8460e8517656c6eb5800a',
         codeChallengeMethod: 'S256',
         scope: ['user-library-modify','user-modify-playback-state','user-read-playback-state','streaming','user-read-email','user-read-private','playlist-read-private','playlist-read-collaborative','user-follow-read','user-library-read']
