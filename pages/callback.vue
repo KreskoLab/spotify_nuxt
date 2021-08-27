@@ -5,6 +5,7 @@
 <script>
 export default {
   layout: 'login',
+  auth: 'guest',
   mounted() {
     console.log(this.$auth.user);
   }
