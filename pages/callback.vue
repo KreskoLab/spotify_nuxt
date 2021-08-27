@@ -4,6 +4,9 @@
 
 <script>
 export default {
-  layout: 'login'
+  layout: 'login',
+  mounted() {
+    console.log(this.$auth.user);
+  }
 }
 </script>

@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  middleware: 'auth',
   computed: {
     show() {
       return this.$store.state.player.show

@@ -15,12 +15,12 @@
 export default {
   layout: 'login',
   auth: 'guest',
-  methods:{
-    async login(){
-      try{ 
+  methods: {
+    async login() {
+      try { 
         await this.$auth.loginWith('spotify')
       }
-      catch(err){
+      catch(err) {
         console.log(err);
       }
     }
